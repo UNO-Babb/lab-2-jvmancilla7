@@ -1,7 +1,7 @@
 #Magic8Ball.py
-#Name:
-#Date:
-#Assignment:
+#Name: Juan Mancilla Vargas
+#Date: 01/28/2025
+#Assignment: Magic8Ball
 
 #We will need random for this program, import to use this package.
 import random
