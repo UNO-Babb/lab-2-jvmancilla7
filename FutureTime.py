@@ -12,21 +12,17 @@ def main():
   currentHour = (now.hour - 6) % 24
   currentMinute = now.minute
 
-  print (currentHour, currentMinute) #this is just for checking, we should delete it later
-
   #TODO:
   #Ask user for hours
   #Ask user for minutes
-  moreMins = 5
-  moreHours =12
+  moreMins = 60
 
-  futureMins = (currentMinute + moreMins) % 60
-  extraHour = (currentMinute + moreMins) // 60
-  futureHour = (currentHour + moreHours + extraHour) % 24
-  futureHour12 = (futureHour % 12)
-  period = ["AM", "PM" ] [ (futureHour //12)%2]
+  totalMinutes = currentMinute + moreMins
+  futureMinutes = totalMinutes % 60
+  futureHours = (currentHour + totalMinutes // 60) % 24
+  print(f"The future will be {futureHours:02}:{futureMinutes:02}")
 
-  print(f"Future Time: {futureHour12:02} : {futureMins:02} {period}")
+
 
   #Calculate the time after the user-supplied time has passed.
 
